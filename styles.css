@@ -1,0 +1,138 @@
+/**/
+
+/* COLOR PALETTE
+
+#CCD5E4 light blue
+#B3C4CD light green
+#204853 dark green
+#FF5A5F hot pink
+
+*/
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccd5e4;
+    font-size: 16px;
+    font-family: 'Harmattan', sans-serif;
+}
+
+a {
+    color: #204853;
+}
+
+/* Main Page Grid */
+header { grid-area: header; }
+nav { grid-area: nav; }
+.intro { grid-area: intro; }
+#internal_nav { grid-area: intnav;}
+#portfolio { grid-area: portfolio;}
+footer { grid-area: footer;}
+
+.wrapper {
+    display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+    'header nav nav'
+    'intro intro intro'
+    'intnav intnav intnav'
+    'portfolio portfolio portfolio'
+    'footer footer footer';
+    grid-row-gap: 20px;
+}
+
+/* Main Navigation */
+nav {
+    background-image: url(images/agave.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3em 0 3em 1em;
+}
+
+nav a {
+    flex: 25%;
+    padding: 1em;
+}
+
+/* Internal Navigation */
+#internal_nav {
+    margin-top: 40px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.link {
+    background-color: #B3C4CD;
+    margin: 0 1em;
+    padding: 1em;
+    flex: 20%;
+    border-radius: 10px;
+}
+
+/* Portfolio Grid */
+section h1 { grid-area: section_header;}
+.caption1 { grid-area: caption1;}
+.caption2 { grid-area: caption2;}
+.caption3 { grid-area: caption3;}
+.caption4 { grid-area: caption4;}
+.img1 {grid-area: img1;}
+.img2 {grid-area: img2;}
+.img3 {grid-area: img3;}
+.img4 {grid-area: img4;}
+
+section {
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'section_header section_header'
+    'caption1 img3'
+    'img1 img3'
+    'img1 caption3'
+    'img1 img4'
+    'caption2 img4'
+    'img2 img4'
+    'img2 caption4';
+}
+
+/* Introduction */
+.intro {
+    display: flex;
+    font-size: 1.1em;
+}
+.magic {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;    
+    background: -webkit-linear-gradient(#204853, #FF5A5F);
+    /* w3c doesn't recognize "text" as a value for background-clip, but MDN ... and the browser does, so go figure */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+.intro .intro_img {
+    order: 2;
+}
+.intro .blurb {
+    order: 1;
+    width: 60%;
+    margin: 0 20px 0 10%;
+}
+
+/* Footer */
+footer {
+    background: -webkit-linear-gradient(#CCD5E4, #FF5A5F, #204853);
+}
