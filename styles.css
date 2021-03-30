@@ -1,9 +1,13 @@
-/**/
+/*
+    Jackie Chambliss
+    WEB 210 Lesson 10
+    styles.css
+*/
 
 /* COLOR PALETTE
 
 #CCD5E4 light blue
-#B3C4CD light green
+#ACC1C1 light green
 #204853 dark green
 #FF5A5F hot pink
 
@@ -101,7 +105,7 @@ nav a {
 }
 
 .link {
-    background-color: #B3C4CD;
+    background-color: #ACC1C1;
     margin: 0 1em;
     padding: 1em;
     flex: 20%;
@@ -146,7 +150,7 @@ section {
 }
 section h1 {
     text-align: center;
-    background-color: #B3C4CD;
+    background-color: #ACC1C1;
     width: 100%;
     margin: 30px auto;
     border-radius: 10px;
@@ -190,7 +194,12 @@ section img:hover {
 #photography, #recipes {
     display: none;
 }
+
 /* Footer */
 footer {
-    background: -webkit-linear-gradient(#CCD5E4, #FF5A5F, #204853);
+    background: -webkit-linear-gradient(#CCD5E4, #204853);
+}
+footer p {
+    text-align: center;
+    height: 60px;
 }
