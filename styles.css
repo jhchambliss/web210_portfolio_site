@@ -19,7 +19,6 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -27,14 +26,12 @@ body {
     font-size: 16px;
     font-family: 'Harmattan', sans-serif;
 }
-
 a {
     color: #204853;
 }
 
 /* Main Page Grid */
-header { grid-area: header; }
-nav { grid-area: nav; }
+.title {grid-area: title;}
 .intro { grid-area: intro; }
 #internal_nav { grid-area: intnav;}
 #portfolio { grid-area: portfolio;}
@@ -44,13 +41,26 @@ footer { grid-area: footer;}
     display: grid;
 	grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas: 
-    'header nav nav'
+    'title title title'
     'intro intro intro'
     'intnav intnav intnav'
     'portfolio portfolio portfolio'
     'footer footer footer';
     grid-row-gap: 20px;
 }
+
+/* Title Area */
+.title {
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #CCD5E4;
+    z-index: 2;
+}
+header { flex-basis: 1; }
+header img { padding: 10px; }
+.title label, #checkbox { display: none; }
 
 /* Main Navigation */
 nav {
@@ -61,8 +71,9 @@ nav {
     align-items: center;
     text-align: center;
     margin: 3em 0 3em 1em;
+    flex-basis: 4;
+    width: 100%;
 }
-
 nav a {
     flex: 25%;
     padding: 1em;
@@ -97,13 +108,11 @@ nav a {
 #internal_nav {
     margin-top: 40px;
 }
-
 .links {
     display: flex;
     justify-content: center;
     text-align: center;
 }
-
 .link {
     background-color: #ACC1C1;
     margin: 0 1em;
@@ -111,12 +120,10 @@ nav a {
     flex: 20%;
     border-radius: 10px;
 }
-
 #internal_nav .blurb {
     margin: 30px 10%;
     font-size: 1.1em;
 }
-
 .link a {
     font-weight: bold;
     font-size: 1.2em;
@@ -189,8 +196,6 @@ section img:hover {
     font-size: 1.4em;
     display: none;
 }
-
-
 #photography, #recipes {
     display: none;
 }
@@ -202,4 +207,47 @@ footer {
 footer p {
     text-align: center;
     height: 60px;
+}
+
+@media screen and (max-width:750px) {
+    .title {
+        display: inline;
+    }
+    .title label {
+        display: inline-block;
+        color: #fff;
+        background-color: #ACC1C1;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 20px;
+        position: fixed;
+        top: 20px;
+        z-index: 3;
+        border-radius: 0 10px 10px 0;
+        background-image: url(images/menu_xs.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    nav a {
+        display: block;
+        width: 100%;
+        border-top: 1px solid #000;
+    }
+    nav { 
+        display: none; 
+        width: 50%;
+        position: fixed;
+        top: 20px;
+        left: 0;
+        margin: 0;
+    }
+    .title input:checked ~ nav {display: block; }
+    .title input:checked + label {
+        background-color: transparent;
+        background-image: url(images/menu_close_dark_s.png);
+    }
+    header img {
+        width: 30%;
+        margin-left: 40px;
+    }
 }
