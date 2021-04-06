@@ -1,0 +1,143 @@
+<!--
+    Jackie Chambliss
+    WEB 210 Lesson 10
+    index.html
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Harmattan:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Jackie Chambliss: Clicky Button Specialist</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <header>
+                <img src="images/logo.png" alt="">
+            </header>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox"></label>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="#internal_nav">PROJECTS</a>
+                <a href="">BLOG</a>
+                <a href="">ABOUT</a>
+            </nav>
+        </div>
+        <div class="intro">
+            <div class="intro_img">
+                <img src="images/magical.png" alt="Jackie standing beneath a banner that says 'You are Magical'">
+            </div>
+            <div class="blurb">
+                <p>"Drag and Drop" web design is so common these days. It's the "meal delivery service" of online presence, and like meal delivery kits, it has a time and a place. The question is, do you want to feed your customers the way someone else tells you to, or do you want to ...</p>
+                <p class="magic">Be Magical?</p>
+            </div>
+        </div>
+        <div id="internal_nav"> 
+            <div class="links">
+                <div class="link"><a href="#android">Android</a></div>
+                <div class="link"><a href="#web">Web</a></div>
+                <div class="link"><a href="#ui">UI/UX</a></div>
+                <div class="link" style="display: none;"><a href="#photography">Photography</a></div>
+                <div class="link" style="display: none;"><a href="#recipes">Recipes</a></div>
+            </div>
+            <div class="blurb">
+                <p>Whether flexing analytical skills in the technical realms of mobile and web development or the visual skills of web design and photography, there is always an element of creativity involved. That little spark of magic!</p>
+                <p>Which is something I personally learned to hone in my years behind the bar crafting custom cocktails for various companies and events, so while not directly relevant to your personal design and development needs, it's always fun to find a little something unexpected in the mix :)</p>
+            </div>
+        </div>
+        <div id="portfolio">
+            <section id="android">
+                <h1>Android Development</h1>
+                <p class="caption1">An app for making decisions</p>
+                <div class="portfolio img1">
+                    <img src="images/www_mobile.png" alt="The 'Who Would Win' app splash page">
+                </div>
+                <p class="caption2">Designing layouts in Android Studio</p>
+                <div class="portfolio img2">
+                    <img src="images/android_studio.png" alt="Using layout tools in Android Studio">
+                </div>
+                <p class="caption3">Working with existing code</p>
+                <div class="portfolio img3">
+                    <img src="images/legacy_code.png" alt="Existing program code written in Java for an android app">
+                </div>
+                <p class="caption4">Design for function</p>
+                <div class="portfolio img4">
+                    <img src="images/pdf_mobile.png" alt="Mock-up design for a PDF mobile app">
+                </div>
+            </section>
+            <section id="web">
+                <h1>Web Design & Development</h1>
+                <p class="caption1">Website Redesign for Mobile</p>
+                <div class="portfolio img1">
+                    <img src="images/pleasure_mobile.png" alt="Mobile website using hamburger menu to hide navigation links"><span class="rollover">This project redeveloped the website for Pleasure Island, NC to be responsive across multiple browser sizes and incorporated a hamburger menu into the design for mobile users.</span>
+                </div>
+                <p class="caption2">Personal Blog Site</p>
+                <div class="portfolio img2">
+                    <img src="images/click_for_yes.png" alt="Wordpress personal blog website">
+                </div>
+                <p class="caption3">Working with Text</p>
+                <div class="portfolio img3">
+                    <img src="images/tequila_links.png" alt="Informational text with embedded links and an unordered list with custom bullets">
+                </div>
+                <p class="caption4">Responsive Sites from Scratch</p>
+                <div class="portfolio img4">
+                    <img src="images/vc_screen.png" alt="Website for a bike shop made with responsive design">
+                </div>
+            </section>
+            <section id="ui">
+                <h1>UI/UX</h1>
+                <p class="caption1">Designing with personas</p>
+                <div class="portfolio img1">
+                    <img src="images/tripod.png" alt="Photography app interface designed for intermediate level users">
+                </div>
+                <p class="caption2">Interface recreation</p>
+                <div class="portfolio img2">
+                    <img src="images/instant_pot_mockup.jpg" alt="The Instantpot interface designed in Adobe XD">
+                </div>
+                <p class="caption3">Knowing the capacities of your demographics</p>
+                <div class="portfolio img3">
+                    <img src="images/explorer.png" alt="A photography app made for children">
+                </div>
+                <p class="caption4">Prototyping a design</p>
+                <div class="portfolio img4">
+                    <img src="images/prototyping.png" alt="A website mock-up made in Adobe XD">
+                </div>
+            </section>
+            <section id="photography">
+                <h1>Photography</h1>
+                <p class="caption1">This is the caption for image 1</p>
+                <img src="images/legacy_code.png" alt="not" class="img1">
+                <p class="caption2">This is the caption for image 2</p>
+                <img src="images/legacy_code.png" alt="not" class="img2">
+                <p class="caption3">This is the caption for image 3</p>
+                <img src="images/legacy_code.png" alt="not" class="img3">
+                <p class="caption4">This is the caption for image 4</p>
+                <img src="images/legacy_code.png" alt="not" class="img4">
+            </section>
+            <section id="recipes">
+                <h1>Cocktail Recipes</h1>
+                <p class="caption1">This is the caption for image 1</p>
+                <img src="images/legacy_code.png" alt="not" class="img1">
+                <p class="caption2">This is the caption for image 2</p>
+                <img src="images/legacy_code.png" alt="not" class="img2">
+                <p class="caption3">This is the caption for image 3</p>
+                <img src="images/legacy_code.png" alt="not" class="img3">
+                <p class="caption4">This is the caption for image 4</p>
+                <img src="images/legacy_code.png" alt="not" class="img4">
+            </section>
+        </div>
+        <footer>
+            <p>Cheers for now!</p>
+        </footer>
+    </div>
+</body>
+</html>
