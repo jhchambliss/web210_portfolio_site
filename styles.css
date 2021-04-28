@@ -59,7 +59,7 @@ footer { grid-area: footer;}
     z-index: 2;
     box-shadow: -5px -5px 15px #204853;
 }
-header { flex-basis: 1; }
+
 header img { padding: 10px; }
 .title label, #checkbox { display: none; }
 
@@ -71,7 +71,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 3em 0 3em 1em;
+    margin: 2em 0 3em 1em;
     flex-basis: 4;
     width: 100%;
 }
@@ -85,11 +85,12 @@ nav a {
 /* Introduction */
 .intro {
     display: flex;
-    font-size: 1.1em;
+    font-size: 1.3em;
+    margin: 0 10%;
 }
 .magic {
     font-family: 'Amatic SC', cursive;
-    font-size: 3em;    
+    font-size: 2.8em;    
     background: -webkit-linear-gradient(#204853, #FF5A5F);
     -webkit-background-clip: text;
     background-clip: text;
@@ -102,7 +103,18 @@ nav a {
 .intro .blurb {
     order: 1;
     width: 60%;
-    margin: 0 20px 0 10%;
+    margin-right: 20px;
+}
+.animation {
+    position: relative;
+    animation-name: agave;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+@keyframes agave {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+    
 }
 
 /* Internal Navigation */
@@ -190,12 +202,22 @@ section img {
 section img:hover {
     opacity: .1;
 }
+section p.description:hover {
+    opacity: 1;
+}
+
 .rollover {
     position: absolute;
     left: 30px;
     margin: 20px auto;
     font-size: 1.4em;
     display: none;
+}
+.img1 img + p.description {
+    grid-column: 3/6;
+    columns: white;
+    background-color: #ACC1C1;
+    margin-left: 10px;
 }
 #photography, #recipes {
     display: none;
