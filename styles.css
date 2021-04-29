@@ -114,7 +114,6 @@ nav a {
 @keyframes agave {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
-    
 }
 
 /* Internal Navigation */
