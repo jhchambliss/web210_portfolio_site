@@ -178,6 +178,13 @@ section img:hover {
 #photography, #recipes {
     display: none;
 }
+a.home_link {
+    position: relative;
+    left: 20px;
+}
+a.home_link i {
+    padding-right: 5px;
+}
 
 /* Footer */
 footer {
